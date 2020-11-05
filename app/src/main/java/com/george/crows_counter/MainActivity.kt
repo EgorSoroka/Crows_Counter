@@ -8,6 +8,7 @@ import android.widget.TextView
 class MainActivity : AppCompatActivity() {
     private var counter: Int = 0
     private var countCat: Int = 0
+    private var enough: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,7 +24,17 @@ class MainActivity : AppCompatActivity() {
 
 
         button.setOnClickListener(){
-            hello.text = "Кто здесь??!!"
+            enough++
+            hello.text = when(enough){
+                1 -> "Кто здесь??!!"
+                2 -> "Так все же кто-то есть??"
+                3 -> "Хаха!!! Щекотно!"
+                6 -> "Может хватит??"
+                9 -> "Это уже не смешно!!"
+                15 -> "Довольно!!!"
+                30 -> "Хваааааатииииит!!!!!!111!!"
+                else -> "....."
+            }
 
         }
 
