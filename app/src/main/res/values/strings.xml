@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Crows_Counter</string>
+    <string name="hello_button">Поздороваться!!</string>
+    <string name="counter">Считаем Ворон!</string>
+    <string name="crow_count">Я насчитал</string>
+    <string name="textCat">Это счетчик для котов!</string>
+    <string name="crows_counter">Счетчик ворон</string>
+    <string name="button_cat">Считаем котов</string>
+    <string name="hello_text">Там кто-нибудь есть??!!</string>
+</resources>
