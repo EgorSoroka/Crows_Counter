@@ -2,8 +2,7 @@ package com.george.crows_counter
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.TextView
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
     private var counter: Int = 0
@@ -13,19 +12,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val button = findViewById<Button>(R.id.button)
-        val buttonCat = findViewById<Button>(R.id.button3)
-        val buttonCount = findViewById<Button>(R.id.button_counter)
-
-
-        val hello = findViewById<TextView>(R.id.Hello)
-        val textHello = findViewById<TextView>(R.id.textHello)
-        val textCat = findViewById<TextView>(R.id.text_cat)
-
 
         button.setOnClickListener(){
             enough++
-            hello.text = when(enough){
+            Hello.text = when(enough){
                 1 -> "Кто здесь??!!"
                 2 -> "Так все же кто-то есть??"
                 3 -> "Хаха!!! Щекотно!"
@@ -38,12 +28,12 @@ class MainActivity : AppCompatActivity() {
 
         }
 
-        buttonCount.setOnClickListener(){
-            textHello.text = "Я насчитал ${++counter} ворон"
+        button_counter.setOnClickListener(){
+            text_hello.text = "Я насчитал ${++counter} ворон"
         }
 
-        buttonCat.setOnClickListener(){
-            textCat.text = "Я насчитал ${++countCat} котов!"
+        button3.setOnClickListener(){
+            text_cat.text = "Я насчитал ${++countCat} котов!"
         }
     }
 }
